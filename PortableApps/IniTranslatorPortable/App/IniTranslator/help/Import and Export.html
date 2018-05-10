@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Importing and Exporting Data
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      Importing and Exporting Data
+    </h1>
+    <hr />
+    <p>
+      Starting with version 1.7, IniTranslator now has a generic Import/Export interface. You can
+      access the installed handlers from the <strong>File-Import</strong> and
+      <strong>File-Export</strong> menu items.
+    </p>
+    <p></p>
+    <p></p>
+    <p>
+      The dialogs shows a list of all available file parsers. If a file parser supports both
+      importing and exporting, it will appear in both dialogs. If the parser can be configured, the
+      Configure button will be enabled and you can click it to adjust the parser settings.
+      Double-click an item in the list to start the import/export. Depending on the parser
+      implementation, you are presented with different alternatives, like a dialog to select the
+      file(s) to import or a dialog to preview the file content before you export it.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      <img alt="Import/Export dialog" src="images/ImportExport.jpg" />
+    </p>
+    <p></p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Ini Translator automatically loads any compatible DLL files it finds in the \plugins
+      subfolder and adds it to the dialogs.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <div class="InfoField">
+      <strong>Note:</strong>
+      <p>
+        When you do an import, IniTranslator clears the stored filenames to prevent accidentally
+        saving the imported file(s) to the wrong destination. To save an import back to it's native
+        format, you must export it. To revert to the previously loaded files, use <strong>Recent
+        Files</strong> to locate the files and load them.
+      </p>
+    </div>
+  </body>
+</html>

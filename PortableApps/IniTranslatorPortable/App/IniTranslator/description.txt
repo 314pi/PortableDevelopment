@@ -1,0 +1,45 @@
+Ini Translator Overview
+==========================================================================================================
+
+Ini Translator is a small Windows tool to simplify the translation of ini style language files (as used by programs like FlashGet, Inno Setup, ISTool and Wallpaper Sequencer to name a few) and the GUI is similar to that of poEdit (a translation editor for gnu gettext).
+
+Some of it's main features are:
+- Uses Troy Wolbrinks TNT controls for correct display regardless of locale
+- Uses Jordan Russell's Toolbar2000 (http://www.jrsoftware.org) for that slick look
+- Uses Alex Denisov's TBX enhancements to Toolbar2000 (http://g32.org)
+- Uses TBX Themes created by Roy Magne Klever and others (http://www.rmklever.com)
+- Uses SpTBX for Unicode support in toolbars and menus (http://club.telepolis.com/silverpointdev/sptbxlib/index.htm)
+- Uses Addictive Software's Addict spell checker (http://www.addictivesoftware.com)
+- Dictionaries with support for auto-translation, inversion and multiple translations for each item
+- Sorting of original/translation column
+- Monitoring of external changes to open files 
+- Quick jump to next/previous untranslated item
+- Quickly find "conspicious" items (configurable)
+- Command line interface with "script"-capability
+- Search and Replace
+- Comment viewer and editor
+- Bookmark support
+- Support for loading/saving using different encodings (ANSI, UTF-8, Unicode)
+- Localizable using ini-style language files
+- Plugin support for loading and saving to any conceivable file-format
+- Many plugins included to read and write many popular and common file formats
+
+Ini Translator is hosted at sourceforge and is released under the MPL 1.1 license.
+
+For more information and latest download, see http://sourceforge.net/projects/initranslator
+
+==========================================================================================================
+
+Where to find 3rd party libraries used in Ini Translator:
+
+Troy Wolbrink's TNT controls can be found at http://home.ccci.org/wolbrink/tnt/delphi_unicode_controls.htm
+Jordan Russell's Toolbar2000 can be found at http://www.jrsoftware.org
+Alex Denisov's TBX enhancements to Toolbar2000 can be found at http://g32.org
+TBX Themes by Roy Magne Klever and others can be found at http://www.rmklever.com
+SpTBXLib from Silverpoint Development can be found at http://club.telepolis.com/silverpointdev/sptbxlib/index.htm
+
+Note that these libraries are free to use for non-commercial development but might have restrictions if you use them in any other way. Check the links above for more info.
+
+Addictive Software's Addict Spell Checker can be found at http://www.addictivesoftware.com
+
+Note that Addict is a commercial offering but the dictionaries are free. You don't need to buy an Addict license to use the precompiled IniTranslator executable, but you will need one if you want to recompile the source code with spell checking support. To recompile without spell check support, undefine USEADDICTSPELLCHECKER in TRANSLATOR.INC

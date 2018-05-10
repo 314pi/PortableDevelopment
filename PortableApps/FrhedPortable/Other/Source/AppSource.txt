@@ -1,0 +1,4 @@
+Frhed's source code can be found from its homepage listed in the help.html file.
+
+The launchers source code is available from PortableApps.com:
+http://portableapps.com/apps/development/portableapps.com_launcher

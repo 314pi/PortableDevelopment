@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Opening and Saving Files
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      Opening and Saving Files
+    </h1>
+    <hr />
+    <p>
+      The ini-style language format requires that you open two files: one file (the "original") is
+      displayed in the left list column and the other (the "translation") is displayed in the right
+      list column in the top part of the program.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      To open both the original and translation file at the same time, select <strong>Open
+      Original</strong> (Ctrl+O) from the menu: you will be presented with two dialogs that allows
+      you to first select the original file and then the translation file. If you only want to load
+      the original file, click the <strong>Cancel</strong> button when the second dialog appears.
+      If you already have the original file loaded and want to load another translation file,
+      select <strong>Open Translation</strong> (Ctrl+Shift+O) instead.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The program matches the items in the translation to the items in the original by comparing
+      their Section and Name (Sections are unique and so are Names within a Section. The comparison
+      is not case-sensitive). Items not found in the original file is not displayed in the
+      list.&nbsp;Instead, these items are available through <strong>Orphaned Items</strong> on the
+      View menu.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Conversely, items from the original not found in the translation file, will show as empty
+      items in the translation column. These items also have a light gray background color to
+      quickly find them.&nbsp;
+    </p>
+    <p>
+      When you save the translation, these new items are saved as well. If you load a translation
+      without first loading an original, the list will be empty. The program automatically opens
+      the last opened files the next time you start it.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      When opening and saving files, you can also choose an encoding for the file in the displayed
+      dialog. You can choose between ANSI ("normal" text files), UTF-8 and Unicode. Only UTF-8 and
+      Unicode files may contain a BOM. If you have a file without a BOM but you know for sure that
+      it is Unicode or UTF-8, select the appropriate encoding when opening it.
+    </p>
+    <p>
+      When a file contains a BOM, the user selected encoding is ignored and the encoding specified
+      by the BOM is used instead. Additionally, the default encoding for saving the file is
+      adjusted to match. The encodings of the original and translation files are handled
+      separately, so you can have an original file encoded as ANSI and a translation file encoded
+      as Unicode or any other combination.
+    </p>
+    <p>
+      When saving to UTF-8 and Unicode, IniTranslator always includes the BOM.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p></p>
+    <div class="InfoField">
+      <strong>Note</strong>
+      <p></p>
+      <p>
+        When saving a Unicode or UTF-8 file as ANSI, character information will most probably be
+        lost.
+      </p>
+      <p>
+        &nbsp;
+      </p>
+    </div>
+    <p>
+      &nbsp;
+    </p>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+content xbl-marquee jar:comm.jar!/content/xbl-marquee/ xpcnativewrappers=yes
+content cookie jar:comm.jar!/content/cookie/ xpcnativewrappers=yes
+overlay chrome://communicator/content/tasksOverlay.xul chrome://editor/content/editorTasksOverlay.xul
+content editor jar:comm.jar!/content/editor/ xpcnativewrappers=yes
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://editor/content/editorMailOverlay.xul
+content navigator jar:comm.jar!/content/navigator/
+content communicator-platform jar:comm.jar!/content/communicator-platform/ platform
+content communicator jar:comm.jar!/content/communicator/
+content editor jar:comm.jar!/content/editor/
+overlay chrome://editor/content/editor.xul chrome://editor/content/sitemanagerOverlay.xul

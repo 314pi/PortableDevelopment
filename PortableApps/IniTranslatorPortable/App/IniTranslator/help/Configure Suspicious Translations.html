@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Configure suspicious translations
+    </title>
+    <meta http-equiv="Content-Language" content="en-us" />
+    <link rel="Stylesheet" type="text/css" media="all" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      Configure suspicious translations
+    </h1>
+    <hr />
+    <p>
+      Use the configuration dialog to specify how IniTranslator should look for and report
+      suspicious translations. Open the dialog from the <strong>View-Configure suspicious
+      translations</strong> (Alt+F8) menu item:
+    </p><img alt="" src="images/ConfigSuspicious.jpg" />
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The following options are available:
+    </p>
+    <dl>
+      <dt>
+        <strong>Leading space mismatch</strong>
+      </dt>
+      <dd>
+        Counts the number of leading spaces in the original and translation and checks if they
+        match
+      </dd>
+      <dt>
+        <strong>Trailing space mismatch</strong>
+      </dt>
+      <dd>
+        Counts the number of trailing spaces in the original and translation and checks if they
+        match
+      </dd>
+      <dt>
+        <strong>Mismatched control characters at end</strong>
+      </dt>
+      <dd>
+        Checks the non-alphabetic characters at the end of the original (if any) and checks if the
+        translation matches
+      </dd>
+      <dt>
+        <strong>Original and translation are the same</strong>
+      </dt>
+      <dd>
+        Checks if original and translation contains the same text
+      </dd>
+      <dt>
+        <strong>Translation is empty</strong>
+      </dt>
+      <dd>
+        Checks if the translation is empty. If activated, this is the same as the <strong>Next
+        untranslated</strong> action
+      </dd>
+      <dt>
+        <strong>Match between original and translation</strong>
+      </dt>
+      <dd>
+        The number of occurrences of each string in the list is compared between original and
+        translation. Adding the string "&amp;" to the list does virtually the same as the
+        <strong>Next unmatched shortcut</strong> (F8) action.
+      </dd>
+    </dl>
+    <p>
+      To save the current settings, click the <strong>OK</strong> button. Click
+      <strong>Cancel</strong> to close the dialog without saving the changes.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      To perform the actual check, use the <strong>View-Next suspicious translation</strong>
+      (Shift+F8) action.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      The Command-line Interface
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      The Command-line Interface
+    </h1>
+    <hr />
+    <p>
+      The program accepts up to three command-line filenames <strong>or</strong> a /b switch to
+      load a command-file. You cannot combine the loading of files with the /b options.
+    </p>
+    <p>
+      To load a specific set of files, the command-line must follow this pattern:
+    </p>
+    <pre>
+translator.exe &lt;original&gt; &lt;translation&gt; &lt;dictionary&gt;
+</pre>
+    <p>
+      You can omit files from the end just by leaving them out. To omit a file at the start of the
+      command-line but still load the others, replace the filename with a dot (.) instead.
+    </p>
+    <p>
+      To load a command-file, you must use the /b switch <em>directly</em> followed by the name of
+      the command-file (no spaces after the b!), like this:
+    </p>
+    <pre>
+translator.exe /b&lt;command-file&gt;
+</pre>
+    <p>
+      If filenames contains spaces, the filenames must be enclosed in single or double quotes. The
+      commands the program understands are described in <a href="Appendix%20D.html">Appendix D</a>.
+    </p>
+  </body>
+</html>

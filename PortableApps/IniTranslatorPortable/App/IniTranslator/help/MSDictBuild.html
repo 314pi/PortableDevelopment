@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      MS Dictionary Builder
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      MS Dictionary Builder
+    </h1>
+    <hr />
+    The MS Dictionary Builder application is a utility program to convert Microsoft's Glossary CSV
+    files to IniTranslator dictionaries. You can download the csv files you are interested in from
+    Microsofts FTP site at this adress: <a href=
+    "ftp://ftp.microsoft.com/developr/msdn/newup/Glossary">ftp://ftp.microsoft.com/developr/msdn/newup/Glossary</a>.
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The application looks like this:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      <img border="0" src="images/MsDictBuild.jpg" alt="Image" />
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <dl>
+      <dt>
+        Input Files
+      </dt>
+      <dd>
+        The files you want to convert to dct format. Add one file specification per row. Click the
+        Select button to browse for files using the standard open dialog. Note that wildcards are
+        <strong>not</strong> supported.
+      </dd>
+      <dt>
+        Save converted items to
+      </dt>
+      <dd>
+        Specify the name of the dictionary file you want to create or append to. Select
+        <strong>Append</strong> to add the new items to an existing file or
+        <strong>Overwrite</strong> to replace an existing file. If the file does not exist, it
+        doesn't matter which option you select.
+      </dd>
+    </dl>
+    <p>
+      Click on the <strong>Convert</strong> button to extract the strings fro m the CSV file and
+      put them into the dictionary file.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <div class="InfoField">
+      <strong>Note</strong>
+      <p>
+        As of 2006, Microsoft no longer provide the glossary CSV for free download. Instead, they
+        now have a single consolidated csv file known as the MS Terminology Translations CSV. If
+        you still want the old glossary file, you can request them from Microsoft. More information
+        about how to obtain the old CSV files and how to get the new CSV file, go to <a href=
+        "http://www.microsoft.com/globaldev/tools/MILSGlossary.mspx">http://www.microsoft.com/globaldev/tools/MILSGlossary.mspx</a>.
+      </p>
+    </div>
+    <p>
+      &nbsp;
+    </p>
+    <div class="InfoField">
+      <strong>Note</strong>
+      <p>
+        Some of the CSV files are not correctly formatted. Specifically, they may contain
+        additional linebreaks that the application cannot handle and the end result is an incorrect
+        dictionary file. To fix this, open the CSV in Notepad or WordPad and remove the line breaks
+        and save as text. You should now be able to create a valid dictionary with this
+        application.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      External Tools
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      External Tools
+    </h1>
+    <hr />
+    <p>
+      You can add items to the Tools menu that allow you to launch external tools from within Ini
+      Translator. For example, you can add an item to the Tools menu to launch utilities such as
+      Character Map or Notepad. You can even add commands to open webpages or e-mail clients.
+    </p>
+    <p>
+      The External Tools dialog is available from the <strong>Tools-Customize</strong> menu:
+    </p>
+    <p>
+       
+    </p><img border="0" src="images/ExternalTools.jpg" alt="Image" /><br />
+    <br />
+    <br />
+    <dl>
+      <dt>
+        Menu contents
+      </dt>
+      <dd>
+        Lists the titles of the items currently added to the <strong>Tools</strong> menu. Use the
+        <strong>Move up</strong> and <strong>Move down</strong> buttons to change the order of the
+        items that appear on the menu. Use the <strong>Delete</strong> button to remove an item
+        from the menu. Use <strong>Add</strong> to add a new item to the list.
+      </dd>
+      <dt>
+        Move up
+      </dt>
+      <dd>
+        Moves the selected tool higher in the list.
+      </dd>
+      <dt>
+        Move down
+      </dt>
+      <dd>
+        Moves the selected tool lower in the list.
+      </dd>
+      <dt>
+        Add
+      </dt>
+      <dd>
+        Clears the text boxes so you can specify a new tool.
+      </dd>
+      <dt>
+        Delete
+      </dt>
+      <dd>
+        Removes the tool or command from the <strong>Menu contents</strong> list as well as from
+        the <strong>Tools</strong> menu.
+      </dd>
+      <dt>
+        Title
+      </dt>
+      <dd>
+        The name of the tool or command that will appear on the submenu of the
+        <strong>Tools</strong> menu. Place an ampersand before a letter in the name of the tool to
+        use that letter as an accelerator key for the tool. For example, <code>&amp;Notepad</code>
+        would display <strong><u>N</u>otepad</strong> on the Tools menu.
+      </dd>
+      <dt>
+        Command
+      </dt>
+      <dd>
+        Specifies the path to the .exe, .com, .pif, .bat, .cmd, or other file that you intend to
+        launch. Do not enter command-line switches or arguments here.
+      </dd>
+      <dt>
+        Arguments
+      </dt>
+      <dd>
+        Specifies the variables that are passed to the tool when the tool is selected on the menu.
+        Arguments can specify values that are passed to the tool or command when it is launched.
+        For example, a value can specify a filename or directory. Use the <strong>Arrow</strong>
+        button to select from a list of predefined arguments. You can add more than one. For a
+        complete list of predefined arguments and their definitions, see below. You can also enter
+        custom arguments — command line switches, for example — depending on the command or tool
+        you use.
+      </dd>
+      <dt>
+        Initial directory
+      </dt>
+      <dd>
+        Specifies the working directory of the tool. Use the Arrow button to select directories.
+        You can select more than one.
+      </dd>
+      <dt>
+        Shortcut Key
+      </dt>
+      <dd>
+        Specifies the shortcut key used to invoke the tool. Press the shortcut key combination when
+        the shortcut key edit field has the focus to assign a new shortcut to the selected tool. If
+        the assigned shortcut is already in use anywhere else in the program, the tool item is
+        displayed enclosed in !&gt; and &lt;!. For an example, see the <strong>Character
+        Map</strong> tool in the image above: it has the same shortcut key as the <strong>Copy from
+        Name</strong> menu item. To remove a shortcut key, either press the backspace key or click
+        the <strong>Clear</strong> button.
+      </dd>
+      <dt>
+        Use ShellExecute
+      </dt>
+      <dd>
+        Some tools works better when run using the ShellExecute API function. It's not easy to
+        specify any rule for this, so you will have to use trial and error to find the best way to
+        launch an application. Note that when using ShellExecute, <strong>Wait for
+        completion</strong> is disabled.
+      </dd>
+      <dt>
+        Prompt for arguments
+      </dt>
+      <dd>
+        Displays the <strong>Arguments</strong> dialog box to allow you to enter or edit values for
+        the arguments each time you launch the external tool.
+      </dd>
+      <dt>
+        Wait for completion
+      </dt>
+      <dd>
+        Specifies whether Ini Translator should wait for the tool to close before returning. This
+        is useful if the tool processes one of the files currently loaded in Ini Translator and you
+        need to wait until the tool has finished with it. Note that most standard Windows programs
+        actually return immediately, but most command line tools do not.
+      </dd>
+      <dt>
+        Test
+      </dt>
+      <dd>
+        Click the Test button to test the currently selected tool item without having to close the
+        dialog. This can significantly speed up the process of configuring a tool correctly.
+      </dd>
+    </dl>
+    <p>
+       
+    </p>
+    <p>
+      <strong>Predefined Arguments</strong>
+    </p>
+    <p>
+      The following predefined arguments are available from the <strong>Arrow</strong> menus (not
+      all arguments are available everywhere) :
+    </p>
+    <p></p>
+    <table cellspacing="2" cellpadding="2" width="100%" border="0">
+      <tr>
+        <th width="10%" nowrap="nowrap">
+          Name
+        </th>
+        <th width="9%" nowrap="nowrap">
+          Argument
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original Line
+        </td>
+        <td nowrap="nowrap">
+          $(OrigLine)
+        </td>
+        <td>
+          The entire text of the current original item
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original Text
+        </td>
+        <td nowrap="nowrap">
+          $(OrigText)
+        </td>
+        <td>
+          The selected text of the current original item
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original Path
+        </td>
+        <td nowrap="nowrap">
+          $(OrigPath)
+        </td>
+        <td>
+          Full path and filename of the current original file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original Directory
+        </td>
+        <td nowrap="nowrap">
+          $(OrigDir)
+        </td>
+        <td>
+          Path of the current original file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original Name
+        </td>
+        <td nowrap="nowrap">
+          $(OrigName)
+        </td>
+        <td>
+          Filename of the current original file, without path
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Original  Extension
+        </td>
+        <td nowrap="nowrap">
+          $(OrigExt)
+        </td>
+        <td>
+          File extension of the current original file, including leading dot
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Line
+        </td>
+        <td nowrap="nowrap">
+          $(TransLine)
+        </td>
+        <td>
+          The entire text of the current translation item
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Text
+        </td>
+        <td nowrap="nowrap">
+          $(TransText)
+        </td>
+        <td>
+          The selected text of the current translation item
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Path
+        </td>
+        <td nowrap="nowrap">
+          $(TransPath)
+        </td>
+        <td>
+          Full path and filename of the current translation file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Directory
+        </td>
+        <td nowrap="nowrap">
+          $(TransDir)
+        </td>
+        <td>
+          Path of the current translation file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Name
+        </td>
+        <td nowrap="nowrap">
+          $(TransName)
+        </td>
+        <td>
+          Filename of the current translation file, without path
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Translation Extension
+        </td>
+        <td nowrap="nowrap">
+          $(TransExt)
+        </td>
+        <td>
+          File extension of the current translation file, including leading dot
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Dictionary Path
+        </td>
+        <td nowrap="nowrap">
+          $(DictPath)
+        </td>
+        <td>
+          Full path and filename of the current dictionary file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Dictionary Directory
+        </td>
+        <td nowrap="nowrap">
+          $(DictDir)
+        </td>
+        <td>
+          Path of the current dictionary file
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Dictionary Name
+        </td>
+        <td nowrap="nowrap">
+          $(DictName)
+        </td>
+        <td>
+          Filename of the current dictionary file, without path
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Dictionary Extension
+        </td>
+        <td nowrap="nowrap">
+          $(DictExt)
+        </td>
+        <td>
+          File extension of the current original file, including leading dot
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Application Directory
+        </td>
+        <td nowrap="nowrap">
+          $(AppDir)
+        </td>
+        <td>
+          Path to the Ini Translator application
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          Windows Directory
+        </td>
+        <td nowrap="nowrap">
+          $(WinDir)
+        </td>
+        <td>
+          Path to the Windows folder
+        </td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap">
+          System Directory
+        </td>
+        <td nowrap="nowrap">
+          $(SysDir)
+        </td>
+        <td>
+          Path to the Windows System folder
+        </td>
+      </tr>
+    </table>
+    <p>
+       
+    </p>
+    <div class="InfoField">
+      <p>
+        <strong>Tip:</strong>
+      </p>
+      <p>
+        If you want to see the resulting command-line without executing the tool, temporarily
+        enable <strong>Prompt for Arguments</strong> and then click the <strong>Test</strong>
+        button. The prompt dialog is shown, displaying the command-line that will be executed.
+        Click the Cancel button to close the prompt dialog without executing the tool. When
+        finished, disable the <strong>Prompt for Arguments</strong> option again.
+      </p>
+    </div>
+    <p>
+       
+    </p>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Appendix D
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      Appendix D
+    </h1>
+    <hr />
+    <h3>
+      Command-file syntax
+    </h3>
+    <p>
+      A command-file is an ordinary text file containing commands that you want the program to
+      execute.&nbsp;Each command must appear on it's own line in the file. Empty and unrecognized
+      lines are silently skipped (this is a good way to add comments).&nbsp;Commands must appear as
+      the first item (i.e no whitespace or other characters) on the line. Parameters to the command
+      are separated by one or more whitespace characters between the command and
+      parameter.&nbsp;Commands are executed sequentially from top to bottom. Commands are not
+      case-sensitive.
+    </p>
+    <p>
+      The following commands are recognized by the program:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <table id="Table2">
+      <tr>
+        <th width="40%">
+          Command
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+      <tr>
+        <td>
+          OPENORIG &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the original file. The file is interpreted as ANSI using the
+          current user codepage.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENORIGUC &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the original file. The file is interpreted as Unicode.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENORIGUTF8 &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the original file. The file is interpreted as UTF-8.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENTRANS &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the translation file. The file is interpreted as ANSI using the
+          current user codepage.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENTRANSUC &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the translation file. The file is interpreted as Unicode.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENTRANSUTF8 &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the translation file. The file is interpreted as UTF-8.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          OPENDICT &lt;filename&gt;
+        </td>
+        <td>
+          Opens &lt;filename&gt; as the dictionary file
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SAVETRANS &lt;filename&gt;
+        </td>
+        <td>
+          Saves the content of the translation column to &lt;filename&gt;. The file is saved in
+          ANSI format using the current codepage. If &lt;filename&gt; already exists, it will be
+          overwritten
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SAVETRANSUC &lt;filename&gt;
+        </td>
+        <td>
+          Saves the content of the translation column to &lt;filename&gt;. The file is saved in
+          Unicode format. If &lt;filename&gt; already exists, it will be overwritten
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SAVETRANSUTF8 &lt;filename&gt;
+        </td>
+        <td>
+          Saves the content of the translation column to &lt;filename&gt;. The file is saved in
+          UTF-8 format. If &lt;filename&gt; already exists, it will be overwritten
+        </td>
+      </tr>
+      <tr>
+        <td>
+          SAVEDICT &lt;filename&gt;
+        </td>
+        <td>
+          Saves the content of the&nbsp;loaded dictionary to &lt;filename&gt;. If &lt;filename&gt;
+          already exists, it will be overwritten
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CREATEDICT
+        </td>
+        <td>
+          Creates a dictionary from the currently loaded original and translated files without
+          clearing the dictionary first. To clear the dictionary, call CLEARDICT first
+        </td>
+      </tr>
+      <tr>
+        <td>
+          CLEARDICT
+        </td>
+        <td>
+          Clears the loaded dictionary
+        </td>
+      </tr>
+      <tr>
+        <td>
+          USEDICT
+        </td>
+        <td>
+          Translates all empty items in the translation column using the currently loaded
+          dictionary
+        </td>
+      </tr>
+      <tr>
+        <td>
+          INVERTDICT
+        </td>
+        <td>
+          Inverts the currently loaded dictionary
+        </td>
+      </tr>
+      <tr>
+        <td>
+          QUIT
+        </td>
+        <td>
+          Closes the program. If the QUIT command is omitted, all commands will be executed but the
+          program will stay loaded after it is finished.
+        </td>
+      </tr>
+    </table>
+    <p></p>
+    <div class="InfoField">
+      <p>
+        <strong>Note:</strong>
+      </p>
+      <p>
+        If you don't specify any files to open (by using OPENORIG, OPENTRANS or OPENDICT), the
+        program will load the files from the last time you ran it.
+      </p>
+    </div>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Below is an example of a command-file that loads some files and a dictionary and then uses
+      the dictionary to translate the file, saves the translation using a new name and then
+      quits.&nbsp;Note that it uses relative, absolute and UNC paths.
+    </p>
+    <pre>
+<strong>OPENORIG </strong> ..\languages\english.lng
+<strong>OPENTRANSUC </strong> X:\Translations\polish.lng
+<strong>OPENDICT </strong> Dictionaries\en_po.dct
+<strong>USEDICT</strong>
+<strong>SAVETRANSUTF8 </strong>\\DOMAINSERVER\Translations\Polish\polish2.lng
+<strong>QUIT</strong>
+</pre>
+  </body>
+</html>

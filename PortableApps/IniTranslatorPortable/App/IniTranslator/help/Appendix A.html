@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Appendix A
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      Appendix A
+    </h1>
+    <hr />
+    <h3>
+      The ini file format
+    </h3>
+    <p>
+       
+    </p>
+    <p>
+      The file format natively supported by this program follows the original ini file format used
+      in Windows. An ini file is a text file with rows of items where each group of items are
+      delimited by a <em>Section</em>. Each Section can contain any number of
+      <em>Name=</em><em>Value</em> pairs. Each section must be unique within the file. A section is
+      enclosed in square brackets (i.e. [Section]) and the left square bracket must be the first
+      character on the line. The Section can contain spaces. All characters following the right
+      square bracket are ignored.
+    </p>
+    <p>
+       
+    </p>
+    <p>
+      A Name=Value pair must appears on a single line and the start of the Name must be the first
+      character on the row. A Name can contain any character except the equal sign as it is used as
+      the delimiter before the Value. A Value can contain any characters, including equal
+      signs. Within a Section, a Name must be unique, but a Value doesn't have to be. Sections,
+      Names and Values are handled in a case-insensitive manner. Values may not contain line-break
+      characters. A line starting with a semi-colon is handled as a comment and ignored.
+    </p>
+    <p>
+       
+    </p>
+    <p>
+      <strong>Example:</strong>
+    </p>
+    <pre>
+;This is a comment
+[Section]
+Name1=Value1
+Name2=Value2
+</pre>
+    <p class="InfoField">
+      <strong>NOTE:</strong> starting with 1.3, IniTranslator can also handle
+      files without any Sections - all items will then be part of an empty Section and a section
+      will <em>not</em> be written to the file when saving. In addition, version 1.3 and later
+      also preserves comments at their original location.
+    </p>
+  </body>
+</html>

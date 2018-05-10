@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul#editorWindow"
+                   width="750"
+                   height="520"
+                   sizemode="normal"
+                   screenX="141"
+                   screenY="39" />
+  <RDF:Description RDF:about="chrome://tipoftheday/content/tipoftheday.xul#location"
+                   offsetX="50"
+                   offsetY="50" />
+  <RDF:Description RDF:about="chrome://editor/content/hiddenWindow.xul#editorWindow"
+                   screenX="-32000"
+                   screenY="-32000"
+                   width="100"
+                   height="100"
+                   sizemode="normal" />
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul#sidebar-panels-splitter-box"
+                   height="" />
+  <RDF:Description RDF:about="chrome://tipoftheday/content/tipoftheday.xul">
+    <NC:persist RDF:resource="chrome://tipoftheday/content/tipoftheday.xul#location"/>
+  </RDF:Description>
+  <!--<RDF:Description RDF:about="chrome://editor/content/editor.xul#EditorToolbox"-->
+                   <!--iconsize="small" />-->
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul#sidebar-splitter"
+                   hidden="false" />
+  <RDF:Description RDF:about="chrome://editor/content/sitemanager.xul#dirCol"
+                   ordinal="1" />
+  <RDF:Description RDF:about="chrome://editor/content/sitemanager.xul">
+    <NC:persist RDF:resource="chrome://editor/content/sitemanager.xul#dirCol"/>
+    <NC:persist RDF:resource="chrome://editor/content/sitemanager.xul#sizeCol"/>
+    <NC:persist RDF:resource="chrome://editor/content/sitemanager.xul#lastModifiedCol"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://editor/content/sitemanager.xul#lastModifiedCol"
+                   hidden="true"
+                   ordinal="5" />
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul">
+    <NC:persist RDF:resource="chrome://editor/content/editor.xul#editorWindow"/>
+    <NC:persist RDF:resource="chrome://editor/content/editor.xul#sidebar-box"/>
+    <NC:persist RDF:resource="chrome://editor/content/editor.xul#sidebar-splitter"/>
+    <NC:persist RDF:resource="chrome://editor/content/editor.xul#sidebar-title-box"/>
+    <NC:persist RDF:resource="chrome://editor/content/editor.xul#sidebar-panels"/>
+    <!--<NC:persist RDF:resource="chrome://editor/content/editor.xul#EditorToolbox"/>-->
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://editor/content/hiddenWindow.xul">
+    <NC:persist RDF:resource="chrome://editor/content/hiddenWindow.xul#editorWindow"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul#sidebar-box"
+                   hidden="false"
+                   width="240" />
+  <RDF:Description RDF:about="chrome://editor/content/sitemanager.xul#sizeCol"
+                   hidden="true"
+                   ordinal="3" />
+  <RDF:Description RDF:about="chrome://editor/content/editor.xul#sidebar-panels"
+                   last-selected-panel="urn:sidebar:panel:site-manager" />
+</RDF:RDF>

@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      The Preferences Dialog
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      The Preferences Dialog
+    </h1>
+    <hr />
+    <p>
+      Select <strong>Preferences</strong> (Alt+Enter) from the menu to display the Preferences
+      dialog.&nbsp;
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The General tab:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      <img border="0" src="images/Preferences.jpg" alt="Image" />
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The available options on this tab are:
+    </p>
+    <dl>
+      <dt>
+        Show Quotes
+      </dt>
+      <dd>
+        The Show Quotes options can be used to easier see where strings starts and ends. This is
+        particularily important when the string contains leading and trailing white-space. Since
+        the program normally trims off trailing (but not leading) spaces, the Show Quotes option is
+        the only way to preserve trailing spaces. The quotes are for display purpose only: they are
+        not saved with the string. If you inadverently delete one or both of the quotes this is
+        alright too: the program detects that the quote(s) are missing and adjusts
+        accordingly.<br />
+      </dd>
+      <dd>
+        <p class="InfoField">
+          <br />
+          You can also enable/disable this option from the main menu (<strong>Ctrl+Q</strong>)
+          without opening this dialog.<br />
+        </p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Show details
+      </dt>
+      <dd>
+        If enabled, displays a panel beneath the toolbar that shows the Section and Key of the
+        currently selected item.<br />
+      </dd>
+      <dd>
+        <p class="InfoField">
+          <br />
+          You can also enable/disable this option from the main menu (<strong>Ctrl+D</strong>)
+          without opening this dialog.<br />
+        </p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Show tooltips
+      </dt>
+      <dd>
+        Display tooltip windows for toolbar buttons.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        <strong>Show shortcuts in tooltips</strong>
+      </dt>
+      <dd>
+        Displays the shortcut of the toolbar button in the tooltip. This option can only be changed
+        if <strong>Show tooltips</strong> is enabled.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Remember form position
+      </dt>
+      <dd>
+        Enable this option if you want the program to remember the main windows position when you
+        close it.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Remember min/max state
+      </dt>
+      <dd>
+        Enable this option if you want the program to remember if the window was
+        minimized/maximized as well. This option can only be changed if <strong>Remember form
+        position</strong> is enabled.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Press RETURN to confirm translation
+      </dt>
+      <dd>
+        Normally, a translation is saved as soon as you move to another item. Enable this option to
+        use the RETURN (ENTER) key to confirm the translation without having to move to another
+        item.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Automatically move to next/previous
+      </dt>
+      <dd>
+        Enable this option to automatically move to the next item when RETURN is pressed. Press
+        Shift+RETURN to move to the previous item instead. This option can only be changed if
+        <strong>Press RETURN to confirm translation</strong> is enabled.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Use translation everywhere
+      </dt>
+      <dd>
+        When activated, a newly typed translation will be copied to all other items with an
+        identical original identifier. This is like using the "Use translation everywhere" command
+        without having to press Ctr+Shift+H all the time.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Autofocus translation when typing
+      </dt>
+      <dd>
+        When activated, typing in the list will move focus to the translation field where your
+        typing replaces the selected text.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Font
+      </dt>
+      <dd>
+        Changes the font used by the edit fields and the listview in the program. Use the drop down
+        lists to select a font and a size. Click in the preview to edit the preview text. Click
+        again to return to preview mode. Change the preview text to an empty string to restore the
+        default display (font name and size).<br />
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Language
+      </dt>
+      <dd>
+        Select or type in the path and filename of the language file yu want to use for the
+        program. Click the browse button (...) to show a dialog that allows you to select a file.
+        Restart the program to use the selected language file.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Help
+      </dt>
+      <dd>
+        Select the file to be used as the help file for the program. Click the browse button (...)
+        to show a dialog that allows you to select a file. Press <strong>F1</strong> in the program
+        to display the help file. Note that you can select any type of file as the help file, not
+        only chm or hlp files. When you press F1, the file will be opened with the program
+        associated with the selected file type.
+      </dd>
+    </dl>
+    <p>
+      The Advanced tab:
+    </p>
+    <dl>
+      <dt>
+        <img border="0" src="images/Preferences2.jpg" alt="Image" />
+      </dt>
+    </dl>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The available options on the Advanced tab are:
+    </p>
+    <dl>
+      <dt>
+        Use same start folder for all files
+      </dt>
+      <dd>
+        Enable this option if you want the open translation dialog to "chase" the original dialog
+        (and vice versa). This can be hard too understand, but an example might clear it up:
+      </dd>
+      <dd>
+        <p class="InfoField">
+          <br />
+          Let's say you have a couple of files opened in your <code>C:\Program
+          Files\Translations</code> folder. Now you want to open another set of files in the
+          <code>D:\Other\Translations</code> folder instead. Click <strong>Open Original
+          (Ctrl+O)</strong> and browse to the <code>D:\Other\Translations</code> and select a file
+          as usual.<br />
+          <br />
+          Next, a dialog is shown for the translation file. With the "same folder" option enabled,
+          the start folder for the dialog will be <code>D:\Other\Translations</code>. With the
+          option disabled, the start folder will be <code>C:\Program
+          Files\Translations</code>.<br />
+        </p>
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Show full filename in list columns
+      </dt>
+      <dd>
+        Check this option if you want the list columns to display the path as well as the filename.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Monitor external file changes
+      </dt>
+      <dd>
+        Turns file monitoring on or off. If enabled, external changes to the currently loaded files
+        (original, translation and dictionary) are monitored and you are prompted to reload the
+        file(s) when they have changed.
+      </dd>
+      <dt>
+        Encoding for new files
+      </dt>
+      <dd>
+        Select the encoding to use when creating a new translation file. You can choose between
+        ANSI, UTF-8 and Unicode.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Ignore translated items when using dictionary
+      </dt>
+      <dd>
+        When active, already translated items are skipped when using the dictionary. This option
+        can also be changed from the dialog used when using the dictionary.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Invert dictionary
+      </dt>
+      <dd>
+        Same as the Invert diitionary on the main menu. Enabling this option swaps the currently
+        loaded items in the dictionary so you can use the dictionary to translate "the other way"
+        as well. Note that the inversion stays in effect if you save the dictionary and also when
+        you load another dictionary (i.e if Invert Dictionary is enabled, the newly loaded
+        dictionary will be inverted as well). You can also enable/disable this option from the main
+        menu (<strong>Ctrl+Alt+I</strong>) without opening the dialog.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Ignore &amp;'s in dictionaries
+      </dt>
+      <dd>
+        If checked, '&amp;' characters are ignored when comparing dictionary entries to the
+        original string. This enables you to have a dictionary entry like '&amp;Edit' and use it to
+        replace a translation entry like 'Edit'.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Header
+      </dt>
+      <dd>
+        Specifies the text to add at the top of a file when saving it. To include the header, you
+        have to select the "Save Translation As..." or "Save Original As..." option in the menu,
+        check the "Header" checkbox an click OK. When you save normally, no header is added. The
+        program does not validate the format of the header nor does it check if a header is already
+        present in the file.
+      </dd>
+    </dl>
+    <dl>
+      <dt>
+        Footer
+      </dt>
+      <dd>
+        Specifies the text to add at the end of a file when saving it. To include the footer, you
+        have to select the "Save Translation As..." or "Save Original As..."&nbsp; option in the
+        menu, check the "Footer" checkbox an click OK. When you save normally, no footer is added.
+        The program does not validate the format of the footer nor does it check if a footer is
+        already present in the file.
+      </dd>
+    </dl>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Click <strong>Colors</strong> to display the color settings dialog:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      <img border="0" src="images/ColorPrefs.jpg" alt="Image" />
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Use the controls to select the background and font colors for untranslated items, even rows
+      and odd rows.
+    </p>
+  </body>
+</html>

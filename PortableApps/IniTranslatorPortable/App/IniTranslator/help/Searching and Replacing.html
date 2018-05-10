@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Searching and Replacing
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>
+      Searching and Replacing
+    </h1>
+    <hr />
+    <p>
+      Select <strong>Find</strong> (Ctrl+F) from the main menu to display the Find/Replace dialog:
+    </p>
+    <p>
+      &nbsp;
+    </p><img src="images/FindReplace1.jpg" border="0" alt="Image" />
+    <p>
+      &nbsp;
+    </p>
+    <dl>
+      <dt>
+        <strong>Find what</strong>
+      </dt>
+      <dd>
+        <p>
+          The string to search for.
+        </p>
+      </dd>
+      <dt>
+        <strong>Find in&nbsp;</strong>
+      </dt>
+      <dd>
+        <p>
+          Select the field(s) to search in. You can choose between Original, Translation or Both.
+        </p>
+      </dd>
+      <dt>
+        <strong>Match line</strong>
+      </dt>
+      <dd>
+        <p>
+          Specifies whether the text should match the entire line in the file or only part of it.
+        </p>
+      </dd>
+      <dt>
+        <strong>Match case</strong>
+      </dt>
+      <dd>
+        <p>
+          Specifies whether upper and lower case letters must match.
+        </p>
+      </dd>
+      <dt>
+        <strong>Search up</strong>
+      </dt>
+      <dd>
+        <p>
+          Specifies the direction of the search. Default is down.
+        </p>
+      </dd>
+    </dl>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      Click the <strong>Find Next</strong> button to start the search. If a matching item is found,
+      it is selected in the list. If no matching items can be found, a message box is displayed
+      that reports this.
+    </p>
+    <p>
+      To continue a previous search, click <strong>Find Next</strong> again or select <strong>Find
+      Next</strong> (F3) from the menu. The search will continue from the current location.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      To find and also replace text, select <strong>Replace</strong> (Ctrl+H) from the menu or
+      click the <strong>Replace</strong> button in the Find/Replace dialog. The dialog expands to
+      display additional fields used when replacing text:
+    </p>
+    <p>
+      &nbsp;
+    </p><img src="images/FindReplace2.jpg" border="0" alt="Image" />
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      As before, type in the text to search for in <strong>Find what</strong> and then the text to
+      replace it with in <strong>Replace with</strong> field. You can leave the replace text empty
+      to clear the found text.
+    </p>
+    <p>
+      Note that the replace action is very specific about when to replace text. For example, even
+      if you search in the Original field only, the text to find must be in the Translation field
+      as well unless you check the Match line option or the text won't be replaced.
+    </p>
+    <p>
+      If Match line is enabled, any line that matches the find text exactly (taking into account
+      the state of <strong>Match case</strong>) in either Original or Translation (based on the
+      <strong>Find in</strong>option), will be replaced with the replace text <em>in it's
+      entirety</em>.
+    </p>
+    <p>
+      Click <strong>Replace All</strong> to have the program search through the entire document and
+      replace all matching occurences of the find text with the replace text.
+    </p>
+    <p>
+      To close the dialog, click <strong>Close</strong> or press the <em>Escape</em> key. Your
+      settings and previous searches is stored until the next time you open the dialog. The program
+      remembers the 25 most recent search and replace texts.
+    </p>
+  </body>
+</html>

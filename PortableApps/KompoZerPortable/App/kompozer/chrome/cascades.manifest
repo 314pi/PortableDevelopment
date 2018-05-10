@@ -1,0 +1,2 @@
+content cascades jar:cascades.jar!/content/cascades/
+overlay chrome://editor/content/editor.xul chrome://cascades/content/cascadesOverlay.xul

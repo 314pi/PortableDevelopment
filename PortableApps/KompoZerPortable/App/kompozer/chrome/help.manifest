@@ -1,0 +1,2 @@
+overlay chrome://editor/content/editor.xul chrome://help/content/helpMenuOverlay.xul
+content help jar:help.jar!/content/help/

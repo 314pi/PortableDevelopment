@@ -1,0 +1,6 @@
+skin communicator classic/1.0 jar:classic.jar!/skin/classic/communicator/
+skin global classic/1.0 jar:classic.jar!/skin/classic/global/
+skin mozapps classic/1.0 jar:classic.jar!/skin/classic/mozapps/
+skin help classic/1.0 jar:classic.jar!/skin/classic/help/
+skin navigator classic/1.0 jar:classic.jar!/skin/classic/navigator/
+skin editor classic/1.0 jar:classic.jar!/skin/classic/editor/

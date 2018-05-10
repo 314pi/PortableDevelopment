@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Dictionaries
+    </title>
+    <link rel="stylesheet" type="text/css" href="styles/default.css" />
+  </head>
+  <body>
+    <h1>
+      Dictionaries
+    </h1>
+    <hr />
+    <p>
+      As you begin to translate programs you soon find that a lot of the texts used in software are
+      identical (labels like OK, Cancel, Apply, File, Edit etc are used in just about every program
+      in the world). To avoid having to translate these items manually time after time, the program
+      has support for dictionaries. A dictionary is simply a file containing a list of original
+      strings and one or more translations for each original string for a specific language
+      combination. For example, one file might contain english and polish, another file might
+      contain german and french etc.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The following functionality is available for dictionaries:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <ul>
+      <li>To add an item in the list to the currently loaded dictionary, select the <strong>Add to
+      Dictionary</strong> (Ctrl+Alt+A) command. This will add both the original text and the
+      translation text, unless the original is empty. If the original text is already in the
+      dictionary but the translation is not, the translation is added as an alternate translation.
+      If the translation is empty, only the original is added.
+      </li>
+      <li>To edit the items in the currently loaded dictionary manually, select <strong>Edit
+      Dictionary</strong> (Ctrl+Alt+E). A dialog is displayed that allows you to add, edit and
+      remove both original strings and translations. You can also filter items in this dialog
+      according to the number of translations they have: none, exactly one, more than one, any.
+      With items that have more than one translation, you can set one of them as the default (press
+      Ctrl+Space or double-click the translation).
+      </li>
+      <li>To use a specific dictionary, select <strong>Load Dictionary</strong> (Ctrl+Alt+O) from
+      the menu and select a dictionary file in the dialog. The name of the currently loaded
+      dictionary is displayed in the status bar at the bottom of the program. After loading a
+      dictionary, you can use it to translate items in the list by selecting <strong>Translate
+      using Dictionary</strong> (Ctrl+Alt+T) from the menu. A dialog is displayed that guides you
+      through the translation process.
+      </li>
+      <li>To create a new or update an existing dictionary, select the <strong>New
+      Dictionary</strong> (Ctrl+Alt+N) command from the menu. You will be asked whether you want to
+      create a new,empty dictionary or add the new items to the currently loaded dictionary.&nbsp;
+      </li>
+      <li>To invert a dictionary, select the <strong>Invert Dictionary</strong> (Ctrl+Alt+I)
+      command from the menu. This swaps the currently loaded items in the dictionary so you can use
+      the dictionary to translate "the other way" as well. If the dictionary contains items with
+      multiple translations, each translation becomes a new original with the old original as their
+      only&nbsp; translation. <strong><br />
+        <br />
+        Note</strong> that the inversion stays in effect if you save the dictionary and also when
+        you load another dictionary, i.e. if <strong>Invert Dictionary</strong> is enabled, the
+        newly loaded dictionary will be inverted as well.&nbsp;
+      </li>
+    </ul>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      If you have made changes to the dictionary, you will be prompted to save it when you close
+      the program or select another dictionary.
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <div class="InfoField">
+      <p>
+        <strong><br />
+        Note:</strong>
+      </p>
+      <p>
+        Even if you change the in-memory dictionary, the dictionary on disk will not be altered
+        until you select <strong>Save Dictionary</strong> from the menu. To view the disk file
+        content of the currently selected dictionary, select <strong>View Dictionary</strong>
+        <strong>&nbsp;in Notepad</strong> from the <strong>Tools</strong> menu (this tool item is
+        only available if you installed the default tool items when you ran the setup
+        program).<br />
+      </p>
+    </div>
+  </body>
+</html>

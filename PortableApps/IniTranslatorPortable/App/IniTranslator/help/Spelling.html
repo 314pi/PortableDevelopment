@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Spell checking
+    </title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+/*<![CDATA[*/
+    span.c1 {FONT-WEIGHT: bold}
+    /*]]>*/
+    </style>
+  </head>
+  <body>
+    <h1>
+      Spell checking&nbsp;
+    </h1>
+    <hr />
+    <p>
+      Spell checking in IniTranslator is handled by the excellent Delphi spell checker component
+      from Addictive Software (<a href=
+      "http://www.addictivesoftware.com">http://www.addictivesoftware.com</a>). To spell check a
+      translation file (only translation files are spell checked since the original file is
+      read-only in IniTranslator), select the "<strong>Action-Spelling</strong>" menu item (or
+      press F7). The spell check dialog wil be displayed, already containing the first word of the
+      currently selected translation item:
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      <img src="images/SpellCheckDialog.jpg" border="0" alt="Image" />
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The dialog contains the following commands:
+    </p>
+    <dl>
+      <dt>
+        Ignore
+      </dt>
+      <dd>
+        Skip this word and go to the next word. If the current item doesn't contain any more items,
+        the selection is moved to the next item in the list
+      </dd>
+      <dt>
+        Ignore All
+      </dt>
+      <dd>
+        Same as Ignore but does not ask about this word again
+      </dd>
+      <dt>
+        Change
+      </dt>
+      <dd>
+        Change the word in <strong>"Not found"</strong> to the word in <strong>"Replace
+        With"</strong>. You can double-click an item in the <strong>"Suggestions"</strong> list to
+        use as the replacement word or type in a word directly in <strong>"Replace With"</strong>
+      </dd>
+      <dt>
+        Change All
+      </dt>
+      <dd>
+        Same as Change but the next time the same misspelled word is encountered, it is
+        automatically translated without prompting
+      </dd>
+      <dt>
+        Add
+      </dt>
+      <dd>
+        Adds the word in "Not found" to the personal dictionary
+      </dd>
+      <dt>
+        Cancel
+      </dt>
+      <dd>
+        Closes the spell checking dialog
+      </dd>
+      <dt>
+        Options
+      </dt>
+      <dd>
+        Displays the options dialog:
+      </dd>
+      <dd>
+        <br />
+      </dd>
+    </dl>
+    <p>
+      <img src="images/SpellCheckOptions.jpg" border="0" alt="Image" />
+    </p>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      The options dialog contains&nbsp;settings to control how spell checking is performed and what
+      dictionaries should be used. Click the <strong>"Dictionaries"</strong> button&nbsp;to view
+      and edit your custom dictionaries. Click <strong>"Reset Defaults"</strong> to reset all
+      settings to the defaults as they were at first startup. Option settings are stored on a
+      per-user basis.<br />
+      &nbsp;
+    </p>
+    <p class="InfoField">
+      <span class="c1">Note:</span><br />
+      To be able to spell check, you will need to install at least one dictionary for the language
+      of the translation file you are working on. You can get free dictionaries from the Addict
+      homepage at <a href=
+      "http://www.addictivesoftware.com/dicts.htm">http://www.addictivesoftware.com/dicts.htm</a>.<br />
+
+      <br />
+      Save the dictionaries in the <em>\dictionaries</em> subfolder of the IniTranslator install
+      folder to make them available&nbsp;in the spell checker.<br />
+      <br />
+    </p>
+  </body>
+</html>

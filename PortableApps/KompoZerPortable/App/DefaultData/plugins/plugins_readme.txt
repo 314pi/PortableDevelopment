@@ -1,0 +1,1 @@
+Default NVU plugins may be placed in this directory

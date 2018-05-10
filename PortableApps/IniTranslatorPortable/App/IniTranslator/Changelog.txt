@@ -1,0 +1,710 @@
+Ini Translator Changelog
+========================
+
+2007-10-21:
+- option to change the font preview text
+- localization of plugins implemented where missing and fixed where not working
+
+2007-10-20:
+ResX Parser:
+- template now derived from translation file
+- optionally import metadata nodes and specific mimetypes (set in ini file)
+- preserves encoding or uses UTF-8 as default
+
+2007-10-17:
+- new parser for VS.Net resx files (requested by user)
+- when previewing before exporting, you can now search the content of the preview with Ctrl+F/F3
+
+2007-08-14:
+- modifications for Delphi 2007
+
+2006-12-25:
+- new parser for DC++ language files
+
+2006-12-22:
+- PreviewExportForm didn't delete temporary file
+WixParser:
+- Added support for dual file import (second file optional)
+
+2006-12-21:
+- New parser for Wix (http://wix.sourceforge.net) localization files
+SDFSplit:
+- Validate method added
+- XP manifest added
+- XP manifest files added
+
+2006-12-20:
+- Memory leak in MsgTranslate fixed
+
+2006-12-19:
+Translator:
+- after export, set items as not modified
+Plugins (all):
+- string replaced with WideString
+- PreviewExportForm now supports wordwrap
+POParser:
+- implements ILocalizable
+
+2006-12-18:
+- New plugin for KeePass (http://keepass.sourceforge.net) language files
+- SDFSplit: New utility for splitting and extracting languages from OpenOffice multi-language sdf files
+- Data files for various supported file formats added (for testing and format discovery)
+IniTranslator:
+- let richedit undo first before undolist kicks in
+- Updated arabic language file from Awadh A Al-Ghaamdi
+Plugins:
+- set items as unmodified after import
+OOGSI Parser:
+- improved parsing
+- option to search for correct translation (if items are not in the same order in orig and trans)
+PHPNuke Parser:
+- better parsing, can now handle continuation lines
+
+2006-12-15:
+- Better command processor handling
+- Memory leak in undo list fixed
+- Undo list now always frees the enclosed Data object
+- Replace everywhere was called twice (one too many)
+
+2006-12-14:
+Translator:
+- Memory leak removed
+- Don't show dialogs when CommandProcessor is running
+- Minor updates to tool plugins
+- FastMM4 units added
+FinalBuilder:
+- No need to load and save variables in FB5: use persistent variables instead
+ToolKeyCheck:
+- new unit with strings
+- svn:keywords property added
+
+2006-12-13:
+Translator:
+- Updated language files
+- Fix so tool plugin items are translated correctly
+- New actions for orphan dialog: clear, remove, find
+ToolConsistency:
+- New strings
+ToolKeyCheck:
+- implements ILocalizable
+ToolTrim:
+- implements ILocalizable
+XiliSoftParser:
+- reset counter when there are no more translations
+FinalBuilder:
+- Missing projects added
+- Updated tool project paths
+ToolTreeView, ToolListEdit, ToolConsistency:
+- Handle ENTER and ESCAPE better
+- Use action list
+
+2006-12-11:
+- Trim removed from main app
+- Trim now its own tool plugin
+
+2006-12-10:
+IniTranslator:
+- Add SpellChecker strings to template file
+ToolConsistency:
+- better alhorithm in AutoShortCut
+ToolKeyCheck:
+- Remember user settings
+
+2006-12-09:
+IniTranslator:
+- Option to set SelectedItem in IApplicationServices (peter3)
+ToolKeyCheck:
+- New plugin: ToolKeyCheck. Displays access and accelerator keys in the translation
+ToolConsistency:
+- Implemented ILocalizable (kora)
+- Auto add shortcuts option added (kora)
+
+2006-12-06:
+- Multiple undo
+
+2006-12-05:
+- Released on Sourceforge as 1.9.0.42
+- Bug Fixed: latest release did not work on non-XP systems
+- Bug Fixed: translation comment wasn't cleared when user clicked "New translation"
+- New tool plugin: ToolConsistency. Checks if items are consistently translated, i.e same translation for same original
+ToolConsistency:
+- the user settings are now persisted
+- components are now TNT
+- Items can now be edited in the tree
+- Items can easily be copied to all other matching items
+- Translations always display their accelerator key
+- When form closes, the selected item in the main list is synced
+
+2006-12-04:
+- Released on Sourceforge as 1.9.0.41
+- Bug Fixed: translation is now sorted by index before saving (was sorted by section)
+- Bug Fixed: when merging orphans, items are now inserted at the correct location in the translation
+- Bug Fixed: when an item is deleted, remaining items are reindexed
+- Bug Fixed: when an item is deleted, translation is marked as modified
+
+2006-12-03:
+- Released on Sourceforge as 1.9.0.40
+- Now prompts to export instead of saving when the items have previously been imported
+- Comments are now saved verbatim (i.e you can put anything in there)
+- More comment indicators supported (; // and #)
+- Stats for translated|untranslated|total|% in the statusbar
+
+2006-12-02:
+- Now displays warning when saving translation and there are orphaned items
+- updated version to 1.9.0.39
+- Merge command in Orphans list only active if the current plugin supports it (or if there is no active plugin)
+
+2006-12-01:
+Translator:
+- Orphans form now shows section and name in caption
+- Fix to store the correct encoding after opening a file
+FoxitPlugin:
+- save the *original* file as the template: this way any items missing in the translation will automatically be added without any problems
+- add all items in the translation file that are missing from the original to the Orphans list
+
+2006-11-30:
+ToolProperties:
+- Now displays section and name
+FoxitPlugin:
+- New plugin for Foxit PDF Reader (http://www.foxitsoftware.com/)
+
+2006-11-25:
+- Added project files for BDS 2006
+- Built succesfully with BDS 2006
+
+2006-11-24:
+- updated version to 1.9.0.38
+
+2006-11-23:
+- Several memory leaks detected and removed using FastMM
+
+2006-11-22:
+Common:
+- Don't lock listview while toolitem plugin is active
+- renamed the common import/export dialog classes so they are unique
+- Updated copyright notice in dof files
+- Updated lng files with new strings
+- example commands.txt now points to valid filenames (standard install)
+- Default.lng file updated with strings from plugins
+- Implemented ILocalizable on most plugins (work in progress)
+MainFrm:
+- When command processor is running, don't display any dialogs
+PluginCommon:
+- Standard import/export dialogs now implement ILocalizable
+- Controls changed to Tnt
+TransIntf:
+- ILocalizable.GetString declared as safecall (was stdcall)
+
+2006-11-20:
+- Updated russian.lng to 1.9.0.37 from Alexander Korneinko
+
+2006-11-18:
+- For some strange reason, some parameters where declared as string when they should have been WideString. This messed up the display in the menu/toolbar control
+
+2006-11-15:
+- Renamed string constants for consistency
+- Orphaned items can now be saved to a file and merged into the main items
+
+2006-11-14:
+- More on plugins
+- Added plugins to help file contents
+- safecall added to ILocalizable method
+
+2006-11-13:
+- added about doc in html format
+- added (initial) plugins docs
+- added htt template
+- text rendering bug in ExtTools fixed: TntListBox has problems with virtual mode. Changed to owner drawing
+
+2006-11-12:
+- Changed MRU behavior (again).
+
+  Rules:
+  1. Opening original, cancel on trans - > new MRU (new orig, old trans)
+  1b. if not FileExists(old trans) -> new empty trans
+  2. Open orig + trans - > new MRU(new orig, new trans)
+  3. Open trans -> new MRU(old orig, new trans)
+  if MRU item already exists, nothing is added
+
+- ExtTools: Tnt ListBox doesn't work consistently in virtual mode, change to virtual+ownerdraw fixed it
+
+2006-11-10:
+- Support for localizing plugins (ILocalizable)
+- Modifications to XiliSoftParser to support ILocalizable
+- The common plugin dialogs (frmImport, frmExport) can now optionally read translations from the applications current language file (not the one being edited, but the one used by IniTranslator)
+- Added XiliSoftParser to build script
+- Added XiliSoft parser by Alexander Kornienko
+- Updated documentation (menu command reference - Appendix B)
+- Changed Init method of interfaces, now takes an IApplicationService parameter
+- Added ITranslationService interface to TransIntf
+- Changed MRU file handling: only add when Original + Translation are both <> "" and only add when Translation file is opened
+- Added new "Make translations consistent" command
+- Updated some language files
+
+2006-11-08:
+- MRU items only saved if both original and translation contains valid filenames
+- Logic for opening Original and/or Translation file changed
+
+2006-11-07:
+- new russian.lng from Aleksandr Kornienko
+- Office 2007 theme added
+- Spell errors fixed
+
+2006-09-31:
+- Japanese language file for 1.9.0.13 by Nardog
+
+2006-09-26:
+- MsTermBuild added to build script
+- Added option to build script to use existing folder when building release
+
+
+2006-09-23:
+- Added new MsTermBuild project to convert MS Terminology Translations to IniTranslator dictionaries
+- Dictionary class now removes empty translations automatically when loading and merging etc
+- Changed the way fonts are specified so we can use the MS Shell Dlg substituions
+- DictEditFrm: Fixed error where the TTranslations = 1 returned all items with < 2 translations
+
+2006-08-17:
+- Added support for Headers and Footers
+- UI for setting default encoding for new files (OptionsFrm)
+- New interfaces for accessing Dictionary (TransIntf)
+- Renamed DLL entry point (TransIntf)
+- Updated docs
+- Header and Footer added
+- Rearranged items in OptionsFrm
+- Popup menu to set a translation as default (DictEditFrm)
+- Some hints added
+- Fixed code deleted by mistake (Dictionary)
+- Now uses listview instead of stringgrid (ToolListEdit)
+- Now uses virtual data so it is a bit speedier (ToolListEdit)
+
+2006-08-16:
+- New DefaultTranslation and DefaultIndex for TDictionaryItem so users can specify which translation they prefer if the item has more than one
+- FB project now checks out everything to an empty folder, builds it and cleans up
+- New option to skip the dialog for the rest of the session (DictTranslationSelectDlg)
+- New options for "Show" combobox (DictEditFrm)
+- New options: Specify default encoding for new files. No UI yet, but they are there functionally
+- New Czech.lng from Svatopluk Vit
+
+2006-08-10:
+- keep edit window on-screen (ToolListEdit)
+
+2006-08-09:
+- Released 1.9.0.25 on CodePlex (www.codeplex.com). Really no difference from 1.9.0.13 on SF
+
+2006-08-07:
+- From now on, only one setup file is built (the full one).
+- Added Michael Kogans icon (again!)
+- TMX and XLIFF parsers added to install script
+- Tool Properties View added to install script
+- set correct tag in XLIFF parser if there was none
+
+2006-08-04:
+- New tool plugin to view all properties of the translation items
+- After reading up on XLIFF, I've made some changes:
+-- Don't need to specify language in (XLIFFImportFrm not needed anymore, use default SingleImportFrm)
+-- Even if either source or target (or both!) are missing, an item is created for each "trans-unit" node
+-- MSXML 4.0 has a bug that prevents it from working correctly with this implementation (getElementsByTagName is faulty)
+
+2006-08-01:
+- Started implementation of XLIFF parser
+- Better TMX parsing
+- Removed unsupported TBX theme
+
+2006-07-31:
+- Changed Copyright years in header
+
+2006-07-28:
+- Released version 1.9.0.13 on SourceForge
+
+2006-07-27:
+- The colors of untranslated items and even and odd rows can now be configured by the user
+- ToolListEdit: new tool plugin that displays an alternate type of list editor (similar to the one in Azureus)
+
+2006-07-26:
+- Reverted to TB2k 2.1.8, TBX 2.1 beta 1 and now use SpTBXLib 1.7 for Unicode enabling. There were too many bugs with TBX 2.2 alpha
+- Converted from TBX -> SpTBX
+- Some additional features added to ToolTreeView plugin
+
+2006-07-25:
+- Remaining "string" that shouldn't/can't be changed, has been renamed "AnsiString", remaining "PChar" that shouldn't/can't be changed, renamed to "PAnsiChar"
+- Changed remaining string->WideString, PChar->PWideChar, TStrings->TTntStrings, TStringlist->TTntStringlist
+- Implemented TWideIniFile
+- From now on, the configuration file is always read and written as unicode
+- Some fixes to TMX parser but still doesn't work 100% (especially when exporting). Maybe need another XML parser?
+
+2006-07-23:
+- New tool plugin (ToolTreeView): dísplays the content in a treeview and allows editing of original and translation strings
+- Minor fixes for unicode support
+- Several sizeable forms converted to unsizeable dialogs
+- New icon from Michael Kogan (photonx)
+
+2006-07-22:
+- Cleaned the code handling loading and saving of files and fixed a few bugs
+- When opening a file, the encoding is auto-adjusted to match the actual encoding of the file, not what the user thinks is the encoding. This also changes the encoding for saving the file
+- 
+2006-07-20:
+- Released version 1.9.0.7 on SourceForge
+- A few new strings in Default.lng
+- Fixed Arabic.lng (removed obsolete strings, added new)
+- Better ftp script
+- Converted several string->WideString, TStrings->TTntStrings for better Unicode support
+- Fixed open/save dialogs (with encode combo) to work with Unicode
+- Fixed issue where the translation edit would be marked as modified when the options dialog was opened
+- Fixed issue where the translation could be saved with the wrong encoding when a monitored file was reloaded
+
+2006-07-19:
+- Released version 1.9.0.6 on SourceForge
+- Several extra themes removed since they are not supported by tbx 2.2
+- Menus and toolbars now supports unicode
+- Upgraded to tb2k 2.1.6 and tbx 2.2 alpha for unicode support
+
+2006-07-18:
+- Released version 1.9.0.5 on SourceForge
+- The program can now use language files saved as Unicode
+- Added WideString version of TMemIniFile
+
+2006-07-17:
+- Added interfaces to support tool menu style plugins (IToolItems and IToolItem)
+- Added support class for managing IToolItems
+- Added support to display and execute IToolItem plugins
+- Added a demo to show how to implement the new interfaces
+
+2006-07-13:
+- It should no longer be possible to press RETURN to create new lines in the Add and Edit Item dialog (Original and Translation)
+- Fixed Add/Edit Item functionality so we can maintain original sort when saving files
+- When saving files (both Original and Translation), they are now sorted according to Index (as it was pre 1.8.0.1021) to preserve original sort as much as possible
+- Updated to latest TNT 2.2.5
+- Long standing issue with Cut/Copy/Paste of cyrillic and other non-western codepages hopefully fixed (discussed in the bug tracker and the forums for a long time)
+- Removing a shortcut in the kbd config dialog didn't actually delete the shortcut - fixed
+- Encoding is remembered when files are opened/saved so you don't have to constantly reassign it
+
+ 
+2006-07-12:
+- New option for dictionary: "Ignore translated items when using dictionary"
+- When using dictionary, clicking "Add" just adds the new word without closing the dialog
+- When editing the dictionary, you can now filter items according to whether they have translations or not
+- When creating a new dictionary, empty translations are no longer added, just the original text
+- Fixed behavior of "Next suspicious translation" so empty translations aren't reported as mismatched
+- Fixed behavior of "Next unmatched shortcut" so empty translations aren't reported as mismatched
+
+2006-07-10:
+- Merged ITranslationItem, ITranslationItem2, ITranslationItem3 into ITranslationItem
+- Merged ITranslationItems, ITranslationItems2 into ITranslationItems
+- Added properties PreData and PostData to ITranslationItem
+- Added property Modified to ITranslationItems
+
+
+2006-07-09:
+- Released version 1.9.0.1 on sourceforge
+- Support for multiple translations in dictionary
+- New dialog for "Translate using dictionary"
+- New dialog to edit dictionary items
+- MRU list and toolbar positions are now saved to the ini file instead of registry
+
+2006-07-06:
+- Added "Trim" command: options to trim leading and trailing characters from the items
+- Added "Modified" icon to the list: when a translation has been modified, a marker is shown for that item
+- New configuration dialog for "Next suspicious translation"
+
+2006-06-30:
+- Released version 1.8.0.1022 on sourceforge
+- Fixed installer issue
+
+2006-06-28:
+- Released version 1.8.0.1021 on sourceforge
+- Ini and alf files are now stored in the users Application Data\IniTranslator folder
+- Fixed some spelling errors in lng files
+- Added missing [SpellChecker] section to lng files that needed it
+
+2004-11-28:
+- SecondIsOptional parameter added to PluginCommon\DualImportFrm as suggested by Chris Thornton
+- PreviewExportFrm now checks the validity of the filename before returning success
+
+2004-11-25:
+- New Dictionary unit with a more flexible dictionary implementation
+- Fixed dictionary filename update bug
+- Added hints to all actions missing them
+- Added a new MyShortCutToText function to make the shortcut keys in menus etc use the correct ordering (Ctrl+Shift+Alt) instead of Delphi's backward ordering (Shift+Ctrl+Alt). This change was also needed in TB2Common.pas and TB2Item.pas in TB2k.
+- Added "Save Original" menu item
+- Changed shortcuts for original and translation open/save such that original uses Ctrl+Shift+<key> and translation uses Ctrl+<key>
+
+2004-11-24:
+- When adding a new item, make sure it inserted into the right section
+- Editing items disables the section and name edit fields (maybe name should be enabled?)
+- Improved Add/Delete/Edit support. Now also available for standard ini files.
+- Another fix for the "Find where" itemindex problem in the search/replace dialog. Hopefully it is fixed for good now.
+- New strings in the lng file
+- Support for inverted index sorting added
+- New index column in listview
+
+2004-11-22:
+- Added some support for editing, adding and deleting items. This can (currently) only be done if the items have been imported from a plugin and if the
+  plugin supports the new CAP_ITEM_DELETE, CAP_ITEM_INSERT and CAP_ITEM_EDIT capabilities. When activated, new items appear in the
+  listview popup menu. Currently, only the PO file plugin has been modified to return these capabilities.
+
+2004-11-05:
+- Changed most AnsiString -> WideString
+- Added a fixed TntClasses.pas to the source tree
+- Added a new parser for Microsoft Glossary files (MsDictParser)
+
+2004-10-25:
+- All forms now inherit from TTntForm through a base form (BaseForm/TfrmBase). This allows me to introduce common behavior for the forms in one unit and have it propagate automatically.
+
+2004-10-24:
+- Fixed error where adding the first item to the Tools menu generated a "Cannot focus a disabled or invisible window" error.
+
+2004-10-23:
+- Released on SF
+- Upped version to 1.8.0.0 (for next release)
+- Better error handling when unable to create files
+- Better error handling in DLL's
+- Added OlegParser for Oleg Translator
+
+2004-10-22:
+- Tool items now support shortcuts
+- Tool list shows conflict marker if shortcut is used anywhere else
+
+2004-10-20:
+- Updated help w. External Tools
+- Updated Default and Swedish LNG files
+
+2004-10-19:
+- Removed "CharMap", "View Original|Translation|Dictionary in Notepad": these can now be realized in the Tools menu instead
+- Added External Tools menu and dialog to edit tool items
+- Some standard tool menu items added to the setup script
+
+2004-10-12:
+- Updated Arabic language file from Awadh Al-Ghaamdi
+
+2004-10-11:
+- Updated language files with translation strings for spell checker dialog(s)
+- Updated language files with changed "About" text
+- Added support for Addict spellchecker
+- Addictive Software (http://www.addictivesoftware.com) has kindly donated a license of Addict to IniTranslator!
+
+2004-10-05:
+- Released as 1.7.0.5 on SF
+
+2004-09-30:
+- added "Use translation everywhere" as an option. If activated, the translated text is copied to all other matching items automatically
+- added "Autofocus translation when typing" as an option. If activated, when typing in the listview, the focus moves to the translation field
+- changed all "TRichEdit.Lines.Text" assignments to "TRichEdit.Text". This change makes Undo work for direct manipulation of the text as well as user typing.
+- added a few missing strings to default.lng
+- fixed issue with dictionary always showing up as inverted
+- added a "dictionary" option to the original/translation field popup. If found, a suggested translation for the currently selected text is shown in the popup (this could be improved immensely).
+
+2004-09-24:
+- added SciTE (www.scintilla.org) parser
+- Chinese language file from "gnatix"
+- IniTranslators icon wasn't included in the executable
+
+2003-12-11:
+- fixed bug where the plugin export action called the plugin import action (could not export)
+
+2003-12-02:
+- Fixed TfrmMain.cbThemes.Hint - was empty
+- Fixed bug where TfrmFindReplace.cbFindWhere.ItemIndex wasn't set correctly after loading translations (set too soon)
+- Fixed bug in TfrmImportExport where the default button wasn't translated (the Action overwrote the button caption)
+- Added code to TFrmKbdCfg to manually size bevels to not overlap labels (translation issue)
+- French 1.7b language file from Laurent Guichard
+- Italian 1.7b language file from davincileo
+
+2003-11-29:
+- Released as 1.7b on SF
+- MAP files added to installation (enhances exception dialog info in case of errors)
+- Bug preventing exception dialog to show fixed (same name used twice)
+- Full Screen command added (default F11)
+- Released as 1.7 on SF
+- Prompt to save modified dictionary
+- Add to Dictionary (Ctrl+Alt+A)
+- Italian 1.6 language file from davincileo
+
+2003-10-27:
+- Added IB Forums parser
+
+2003-10-21:
+- Import/Export dialog now remembers last selected parser (but not between sessions)
+- Fixed loading of translation file in some circumstances (like when user dblclicks a file to load the original)
+
+2003-10-20:
+- Added Mozilla Messenger DTD parser (requested by Rhoslyn Prys)
+- Added Mozilla Messenger Properties parser (requested by Rhoslyn Prys)
+2003-10-19:
+- Added phpNuke parser (requested by Rhoslyn Prys)
+- Added MO compiling option to PO parser
+- Rewrote PO parser (especially export part)
+- Better handling of options reloading
+- Better handling of file monitoring
+- Toggling of full filename in listview columns now possible (from options dialog)
+
+2003-09-30:
+- Translation comments can now be edited
+- Fixed quoted string/empty string bug
+
+2003-09-25:
+- Removed built-in PO support
+- Now transparently adds and removes quotes from already quoted values (i.e Opera files)
+- Added external parser interface
+- Added external parser implementations for PO and PHP files
+
+2003-07-21
+- Released version 1.6 on sourceforge
+- Added welsh translation from Rhoslyn Prys
+2003-07-07
+- Now displays and loads both original and translation file from MRU list
+- About box displays app icon isto info icon
+- Added dialog where shortcut keys can be modified.
+
+2003-06-12
+- Added option to ignore &'s when translating with the dictionary
+- Dictonaries are now always saved as unicode
+- Added a whole bunch of new dictionaries with common strings
+
+2003-06-10
+- Fixed Cut,Copy,Paste problems in the main form (wasn't always triggered)
+- Added "Ignore control characters" option to search dialog. When enabled, the search routine will find "E&xit" when searching for "Exit", "Open Folder..." when searching for "Open Folder" etc
+
+2003-06-06
+- Added Catalan translation from Nobody/Anonymous
+- Updated and spell-checked help sources
+
+2003-06-03
+- Added XP manifest. NB: must compile on D7 or btnReplace:TBitBtn button on the Search/Replace dialog is rendered incorrectly on XP. Alternative is to use ThemeManager but that seems like overkill at the moment
+
+2003-06-02
+- Added TBX (http://g32.org) and additional themes from R.Klever (www.rmklever.com) - we got to have some fun, too!
+
+2003-06-01
+- Added "Monitor external file changes" option to options dialog
+- Added dialog to show "orphaned" items (items that are in the translation file but not in the original file)
+
+2003-05-31
+- ASCII Value(s) dialog can now optionally copy the values to the clipboard
+- Bug fix: comboboxes in the search/replace dialog didn't react to shortcuts (Ctrl+X, Ctrl+C etc). This seem to be standard Windows behavior, so a "dummy" actionlist forwards shortcut presses to the active control
+- Added TranslatedCount to the TTranslateFiles class to keep track of the number of items that has been translated
+- Added "Next suspicious translation": searches the translation to find mismatched leading and trailing spaces as well as mismatched trailing "control" characters (like .,:? etc) and items where original=translation
+- Fixed bug where TTNTStrings weren't considered when translating own properties (used in the find/replace dialogs comboboxes)
+- Added "Replace Translation Everywhere": searches the entire translation file and replaces every other occurence of the selected original with the selected translation
+- Added "Clear Translation": sets all items in the translation file to an empty string
+
+2003-05-28
+- Released version 1.5 on sourceforge
+- Added rudimentary and highly experimental support for reading and saving PO files
+- Added compiled help file as an option to the html doc
+
+2003-05-16
+- Added support for reading and saving to different encodings (ANSI, UTF-8, Unicode)
+
+2003-04-28
+- Released version 1.4b on sourceforge
+
+2003-04-28
+- Bug fix: "Replace All" didn't work correctly when "Find in" was set to "Translation"
+- Bug fix: "Remove Invalid" action counted the wrong way (caused "List index out of bounds")
+- Bug fix: Recent file menu items was being incorrectly translated, causing paths containing "\t", "\r" and "\n" to be decoded to TAB, CR and LF respectively...
+- Bug fix: "Replace All" replaced *all* the following items when a matching item hade been found
+
+2003-04-28
+- Released version 1.4 on sourceforge
+
+2003-04-27
+- New Find/Replace dialog similar to the one in VS.NET
+- Updated help file
+
+2003-04-24
+- Added bookmark support. Works like Delphi's (i.e Ctrl+Shift+[0..9] to toggle, Ctrl+[0..9] to jump)
+- Added "Next unmatched shortcut" (F8) function that finds items where one of the items (original or translation) have a "&" but the other hasn't
+
+2003-04-24
+- Added Ctrl+Home, Ctrl+End, Ctrl+PgUp and Ctrl+PgDn to navigate the listview without leaving edit field (same as Prev, Next)
+- Added Alt+ num keyboard codes to "ASCII Value(s)" message box
+- Changed main shortcut for "ASCII Value(s)" to Ctrl+I. Ctrl+E is now secondary shortcut
+- Renamed "Encode" to "ASCII Value(s)" since it better describes the action
+
+2003-04-24
+- Added tb2k MRU list
+- Replaced popup menus with tb2k popup menus
+- Added popup menu for the list view
+- Fixed quote bug when editing files that have quotes as part of their Value(s)
+
+2003-04-23
+- Added "pin" button to comment window
+
+2003-04-22
+- Released version 1.3 on sourceforge
+- Added comment viewer window as well as listview popup hints when comments are available
+- Added CommentChar, SeparatorChar, StartSection and EndSection to TTranslateFiles (in TranslateFile.pas).
+  This should make it possible to load just about any type of language file by defining
+  the appropriate characters. There is no provision for changing these values yet,
+  so at present this ability is more of academic interest...
+
+2003-04-22
+- By default, main form is now displayed in the center of the screen the first time the program runs
+- Added Portuguese(Brazil).lng from Sliphacker
+- Updated language files with changed items
+- Updated en_se dictionary
+- Changed font selection so that only the listview and the richedits are affected
+- Faster load time for translation file thanks to sorting and binary search
+- Added "hidden" (no menu entry) comment view (Ctrl+M)
+
+2003-04-22
+- Fixed bug in Replace dialog where "Replace all" didn't replace the text in the currently selected item
+- Added "Encode" to richedit popup-menus: select some text and hit Ctrl+E to see the text encoded in hex (currently in a dialog, but this will change). This is nice to have when working with language files that contain non-printing characters (like pagepromoter)
+- Added charmap.exe to menu (if it is installed). Makes it a bit easier to insert foreign and non-printing characters if needed
+
+2003-04-21
+- Accepts dropped files according to the following rules:
+  * Drop one file: drop in left part of window to load as original file, drop in right part to load as translation
+  * Drop two files: first file is original, second tranlsation
+  * Drop three files (or more): first file is original, second file is translation, third file is dictionary
+- Comments are now saved with the item it precedes
+- New option: "Use same start folder for all files". When enabled, the translation file start folder is recalculated when the original file start folder is changed (and vice versa).
+- Added new images to the listview. Can display four different icons now: no comments-untranslated/no comments-translated/comments-untranslated/comments-translated
+
+2003-04-21
+- Now loads translation files directly instead of using TMemIniFile. This should mean faster load times and the ability to use language files without sections. Comments should also be preserved.
+- Added options dialog and new options. Removed unnecessary menu items as a result of this
+- Rewrote "Translate" logic to be able to save/load translations for the options dialog (and any other future forms)
+- Options moved to TAppOpttions class
+- Split code into several new logical units (consts, utils, options, language)
+- Added URL:s to 3rd party tools in description.txt
+- Fixed bug in statusbar text (inverted dictionary was showing number of items isto dictionary filename)
+- Tweaked file monitor code to get rid of spurious (and wrong!) "file was modified outside program" warnings
+
+2003-04-18
+- Released version 1.2 on sourceforge
+- Disabled RETURN in translation richedit
+- Added Toolbar2000 credits to About box
+- Changed menu/toolbar icons
+
+2003-04-17
+- Replaced menus with Toolbar2000 (http://www.jrsoftware.org)
+- Fixed internal translation logic
+- Added storage of size and position of main form
+- Icons on menus
+- Renamed and rearranged actions
+- Added details panel: shows the section and key a lá Outlook. Can be toggled on/off.
+- Made adjustments in the setup script
+
+2003-04-16
+- Released version 1.1 on sourceforge
+- Hard-coded hotkeys for top-menu items since it was causing problems when generating the language file for the app
+- Changed setup script to use ISPP for common values that might change
+- Comments are now preserved at the top of the ini file(s) thanks to new TCommentIniFile class in CmtIniFile
+
+2003-04-15
+- Fixed spelling in help file
+- Better search and replace (whole word, case sense, up/down)
+- MsgTranslate converted to class
+- File monitoring improved (shouldn't warn when saving from within the program)
+- Fixed bug where the currently selected changed item wasn't saved when jumping to Next/Prev
+- Added menu option to select language file (needs restart before use)
+- Added french translation from François Rivierre
+- Added german translation from Christoph Juengling
+
+2003-04-14
+- Released version 1.0 on sourceforge
+
+2003-04-10
+- Started development
